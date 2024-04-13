@@ -13,16 +13,20 @@ async function handelGenrateNewUrl(req, res) {
         redirectUrl: body.url,
         visitHistory: [],
     })
+     return res.render("home" , {
+        id : shortId
+     })
+    // return res.json({id : shortId})
 
 }
 
-async function handelGetAnalytics(req,res) {
-   const shortId = req.params.shortId;
-   const results = await URL.findOne({ shortId})
+async function handelGetAnalytics(req, res) {
+    const shortId = req.params.shortId;
+    const results = await URL.findOne({ shortId })
 
-   return res.json({
-      totalClicks : results.visitHistory.length,
-      analytics : results.visitHistory
-   })
+    return res.json({
+        totalClicks: results.visitHistory.length,
+        analytics: results.visitHistory
+    })
 }
 module.exports = { handelGenrateNewUrl, handelGetAnalytics }
