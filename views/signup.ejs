@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SignUp </h1>
+    <form action="/user" method="post">
+        <table>
+            <tr>
+                <td> <label for="">Enter your Full Name :</label> </td>
+                <td> <input type="text" required placeholder="Enter Your Name" name="name" /> </td>
+            </tr>
+
+            <tr>
+                <td> <label for="">Enter your Email:</label> </td>
+                <td> <input type="email" required placeholder="Enter Your Email" name="email" /> </td>
+            </tr>
+
+            <tr>
+                <td><label for="">Enter your Password:</label> </td>
+                <td> <input type="password" required placeholder="Enter Your Password" name="password" /> </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <br><br>
+                    <button type="submit">SignUp</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
