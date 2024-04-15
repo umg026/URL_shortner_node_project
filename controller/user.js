@@ -22,9 +22,9 @@ async function handelUserLogin(req, res) {
         error: "Invalid Username or password"
     })
 
-    const sessionId = uuidv4();
-    setUser(sessionId , user);
-    res.cookie("uid" , sessionId);
+    // const sessionId = uuidv4();   //for session id
+   const token =  setUser(user);
+    res.cookie("uid" , token);
 
     return res.redirect("/")
 }
